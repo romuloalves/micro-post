@@ -1,6 +1,6 @@
 {
   "name": "micro-post",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Package to filter POST HTTP requests with micro",
   "main": "src/index.js",
   "scripts": {
