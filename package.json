@@ -1,0 +1,52 @@
+{
+  "name": "micro-post",
+  "version": "0.0.0",
+  "description": "Package to filter POST HTTP requests with micro",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "xo",
+    "example": "micro -p 3000 ./example/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "get+https://github.com/romuloalves/micro-post.git"
+  },
+  "keywords": [
+    "micro",
+    "http",
+    "https",
+    "get",
+    "microservice"
+  ],
+  "author": {
+    "name": "Rômulo Alves",
+    "email": "romuloaalv@gmail.com",
+    "url": "https://romuloalv.es"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romuloalves/micro-post/issues"
+  },
+  "homepage": "https://github.com/romuloalves/micro-post#readme",
+  "xo": {
+    "envs": [
+      "node"
+    ],
+    "esnext": true,
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "max-lines": 0,
+      "ava/no-ignored-test-files": 0,
+      "no-labels": 0,
+      "no-unused-labels": 0,
+      "no-unused-expressions": 0,
+      "yoda": 0,
+      "no-negated-condition": 0
+    }
+  },
+  "devDependencies": {
+    "micro": "^6.1.0",
+    "xo": "^0.17.1"
+  }
+}
