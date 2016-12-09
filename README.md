@@ -21,7 +21,7 @@ const post = require('micro-post')
 
 /*
   - POST requests will execute the function
-  - Non-POST requests will return HTTP Code 404
+  - Non-POST requests will return HTTP Code 405
 */
 module.exports = post(async (req, res) => {
   return send(res, 200, `It's a POST request!`)
