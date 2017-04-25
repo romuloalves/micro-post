@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "get+https://github.com/romuloalves/micro-post.git"
+    "url": "git+https://github.com/romuloalves/micro-post.git"
   },
   "keywords": [
     "micro",
@@ -20,7 +20,7 @@
   ],
   "author": {
     "name": "Rômulo Alves",
-    "email": "romuloaalv@gmail.com",
+    "email": "me@romuloalv.es",
     "url": "https://romuloalv.es"
   },
   "license": "MIT",
