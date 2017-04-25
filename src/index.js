@@ -2,17 +2,22 @@
 
 const ALLOWED_HTTP_METHOD = 'POST'
 
+const defaultErrorCode = 405
 const defaultResponse = 'Method Not Allowed'
 const defaultContentType = 'text/plain'
 
 function getDefaultParams(params) {
   if (params == null) {
     return {
+      errorCode: defaultErrorCode,
       response: defaultResponse,
       contentType: defaultContentType
     }
   }
 
+  if (params.errorCode == null) {
+    params.errorCode = defaultErrorCode
+  }
   if (params.response == null) {
     params.response = defaultResponse
   }
@@ -37,7 +42,7 @@ module.exports = exports = function (params, fn) {
       const response = typeof params.response === 'object' ?
         JSON.stringify(params.response) :
         params.response
-      res.writeHead(405, {
+      res.writeHead(params.errorCode, {
         'Content-Type': params.contentType,
         'Content-Length': Buffer.byteLength(response)
       })
