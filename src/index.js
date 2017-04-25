@@ -34,10 +34,13 @@ module.exports = exports = function (params, fn) {
     res.setHeader('Access-Control-Request-Method', ALLOWED_HTTP_METHOD)
     const {method} = req
     if (method !== ALLOWED_HTTP_METHOD) {
-      res.writeHead(405, {'Content-Type': params.contentType})
       const response = typeof params.response === 'object' ?
         JSON.stringify(params.response) :
         params.response
+      res.writeHead(405, {
+        'Content-Type': params.contentType,
+        'Content-Length': Buffer.byteLength(response)
+      })
       res.end(response)
       return
     }
