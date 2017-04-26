@@ -64,6 +64,8 @@ module.exports = post(options, async (req, res) => {
 
 ## Examples
 
+*Each example has its own README explaining how to execute it.*
+
 ### All default options: <a href="./example/default">default</a>
 
 Example that use the default options of the package.
@@ -95,6 +97,14 @@ The response is a custom HTML  with content-type `text/html`.
 ### Custom Function: <a href="./example/custom-function">custom-function</a>
 
 Before the response ends, the function that receives the `request` and the `response` from HTTP is called.
+
+## Developing/Contributing
+
+*Feel free to open issues and create PRs! :)*
+
+This package is linted by [XO](https://github.com/sindresorhus/xo) and tested by [AVA](https://github.com/avajs/ava).
+
+After install the dependencies you can execute `npm test`, that will test different responses. Each test creates its [Micro](https://github.com/zeit/micro) instance to simulate a real environment.
 
 
 ## License
