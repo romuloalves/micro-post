@@ -1,6 +1,8 @@
 # micro-post
 > Example that uses a custom HTML as response.
 
+[https://micro-post-example-custom-html.now.sh](https://micro-post-example-custom-html.now.sh)
+
 ## Running
 
 * Install the dependencies with npm (`npm install`) or yarn (`yarn`).

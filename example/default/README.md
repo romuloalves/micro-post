@@ -1,6 +1,8 @@
 # micro-post
 > Example that uses the default response of `micro-post`
 
+[https://micro-post-example-default.now.sh](https://micro-post-example-default.now.sh)
+
 ## Running
 
 * Install the dependencies with npm (`npm install`) or yarn (`yarn`).

@@ -6,6 +6,7 @@
     "start": "micro"
   },
   "dependencies": {
-    "micro": "^7.3.2"
+    "micro": "^7.3.2",
+    "micro-post": "latest"
   }
 }
