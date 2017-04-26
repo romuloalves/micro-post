@@ -11,7 +11,7 @@ When developing a microservice with Nodejs and [zeit](https://github.com/zeit)/[
 
 Just encapsulating your existing function in the `micro-post` default exported function will automatically validate the requests, include the `Access-Control-Request-Method` and status code in the response header, and response body with `Method Not Allowed`.
 
-The package allows you to modify it's response code, plain text, change the response by a JSON or even execute a function to manage the request by you own. You can find how to do that in the examples section.
+The package allows you to modify it's response code, plain text, change the response by a JSON or even execute a function to manage the request by your own. You can find how to do that in the examples section.
 
 
 ## Installation
@@ -35,10 +35,6 @@ This is the basic usage. When a non-POST request is received, the response will 
 ```js
 const post = require('micro-post')
 
-/*
-  - POST requests will execute the function
-  - Non-POST requests will return HTTP Code 405 – Method Not Allowed
-*/
 module.exports = post(async (req, res) => {
   return `It's a POST request!`
 })
@@ -46,7 +42,7 @@ module.exports = post(async (req, res) => {
 
 ### With options
 
-You can parameterize some different responses like other messages, JSON and even a function to manage the request by yourself.
+You can parameterize some different responses like other messages, JSON and even a function to manage the request by your own.
 
 ```js
 const post = require('micro-post')
