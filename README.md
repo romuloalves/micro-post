@@ -1,6 +1,6 @@
 # micro-post
 
-> Package to filter POST HTTP requests with [micro](https://github.com/zeit/micro)
+> Package to only accept POST request for microservices built with [Micro](https://github.com/zeit/micro).
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
@@ -8,23 +8,25 @@
 
 Install using [npm](https://www.npmjs.com/):
 ```
-$ npm install --save micro-post
+npm install --save micro-post
 ```
 
-## Usage
+Install using [yarn](https://yarnpkg.com/en/):
+```
+yarn add micro-post
+```
+
+## Basic usage
 
 ```js
-'use strict'
-
-const {send} = require('micro')
 const post = require('micro-post')
 
 /*
   - POST requests will execute the function
-  - Non-POST requests will return HTTP Code 405
+  - Non-POST requests will return HTTP Code 405 – Method Not Allowed
 */
 module.exports = post(async (req, res) => {
-  return send(res, 200, `It's a POST request!`)
+  return `It's a POST request!`
 })
 ```
 
