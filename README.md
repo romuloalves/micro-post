@@ -64,7 +64,7 @@ module.exports = post(options, async (req, res) => {
 
 ## Examples
 
-### All default options: <a href="./examples/default">default</a>
+### All default options: <a href="./example/default">default</a>
 
 Example that use the default options of the package.
 
@@ -73,7 +73,7 @@ Example that use the default options of the package.
 The response is a custom message `Changing the default message is simple as breathe` with content-type `text/plain`.
 
 
-### Custom JSON: <a href="./examples/custom-json">custom-json</a>
+### Custom JSON: <a href="./example/custom-json">custom-json</a>
 
 The response is a custom JSON  with content-type `application/json`.
 
@@ -87,12 +87,12 @@ The response is a custom JSON  with content-type `application/json`.
 }
 ```
 
-### Custom HTML: <a href="./examples/custom-html">custom-html</a>
+### Custom HTML: <a href="./example/custom-html">custom-html</a>
 
 The response is a custom HTML  with content-type `text/html`.
 
 
-### Custom Function: <a href="./examples/custom-function">custom-function</a>
+### Custom Function: <a href="./example/custom-function">custom-function</a>
 
 Before the response ends, the function that receives the `request` and the `response` from HTTP is called.
 
