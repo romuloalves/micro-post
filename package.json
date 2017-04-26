@@ -1,7 +1,7 @@
 {
   "name": "micro-post",
   "version": "0.1.1",
-  "description": "Package to filter POST HTTP requests with micro",
+  "description": "Package to only accept POST request for microservices built with zeit/micro",
   "main": "src/index.js",
   "scripts": {
     "test": "xo && ava"
