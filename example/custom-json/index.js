@@ -9,6 +9,6 @@ const responseErrorJson = {
   }
 }
 
-module.exports = post({response: responseErrorJson, contentType: 'application/json'}, async (req, res) => {
+module.exports = post({response: responseErrorJson}, async (req, res) => {
   return send(res, 200, `It's a POST request!`)
 })
