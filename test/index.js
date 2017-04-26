@@ -86,3 +86,13 @@ test('get with function in the response', async t => {
   t.deepEqual(error.statusCode, 405)
   t.deepEqual(error.error, 'writing...')
 })
+
+test('get with HTML in the response', async t => {
+  const microInstance = micro(post({response: '<h1>I am</h1><h2>HTML!</h2>', contentType: 'text/html'}, service))
+  const url = await listen(microInstance)
+
+  const error = await t.throws(request(url))
+  t.deepEqual(error.statusCode, 405)
+  t.deepEqual(error.error, '<h1>I am</h1><h2>HTML!</h2>')
+  t.deepEqual(error.response.headers['content-type'], 'text/html')
+})
