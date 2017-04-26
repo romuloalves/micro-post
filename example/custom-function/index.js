@@ -1,7 +1,7 @@
 'use strict'
 
 const {send} = require('micro')
-const post = require('../../src')
+const post = require('micro-post')
 
 async function errorResponseFunction(req, res, next) {
   res.write('This was write by a custom response function')

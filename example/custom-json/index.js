@@ -1,7 +1,7 @@
 'use strict'
 
 const {send} = require('micro')
-const post = require('../../src')
+const post = require('micro-post')
 
 const responseErrorJson = {
   error: {
