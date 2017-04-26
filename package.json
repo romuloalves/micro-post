@@ -4,8 +4,7 @@
   "description": "Package to filter POST HTTP requests with micro",
   "main": "src/index.js",
   "scripts": {
-    "test": "xo",
-    "example": "micro -p 3000 ./example/index.js"
+    "test": "xo && ava"
   },
   "repository": {
     "type": "git",
@@ -29,24 +28,14 @@
   },
   "homepage": "https://github.com/romuloalves/micro-post#readme",
   "xo": {
-    "envs": [
-      "node"
-    ],
-    "esnext": true,
     "space": true,
-    "semicolon": false,
-    "rules": {
-      "max-lines": 0,
-      "ava/no-ignored-test-files": 0,
-      "no-labels": 0,
-      "no-unused-labels": 0,
-      "no-unused-expressions": 0,
-      "yoda": 0,
-      "no-negated-condition": 0
-    }
+    "semicolon": false
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "micro": "^6.1.0",
+    "request-promise": "^4.2.0",
+    "test-listen": "^1.0.2",
     "xo": "^0.17.1"
   }
 }

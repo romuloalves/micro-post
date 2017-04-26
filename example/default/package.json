@@ -1,0 +1,12 @@
+{
+  "name": "micro-post-example-default",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro"
+  },
+  "dependencies": {
+    "micro": "^7.3.2",
+    "micro-post": "latest"
+  }
+}
