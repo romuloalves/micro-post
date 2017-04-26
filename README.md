@@ -4,6 +4,16 @@
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
+## About
+
+When developing a microservice with Nodejs and [zeit](https://github.com/zeit)/[micro](https://github.com/zeit/micro) you may want to accept only POST methods.
+`micro-post` is a simple package that allows you to achieve this with a lot of simplicity.
+
+Just encapsulating your existing function in the `micro-post` default exported function will automatically validate the requests, include the `Access-Control-Request-Method` and status code in the response header, and response body with `Method Not Allowed`.
+
+The package allows you to modify it's response code, plain text, change the response by a JSON or even execute a function to manage the request by you own. You can find how to do that in the examples section.
+
+
 ## Installation
 
 Install using [npm](https://www.npmjs.com/):
@@ -16,7 +26,11 @@ Install using [yarn](https://yarnpkg.com/en/):
 yarn add micro-post
 ```
 
-## Basic usage
+## Usage
+
+### Basic
+
+This is the basic usage. When a non-POST request is received, the response will be `405 – Method Not Allowed`.
 
 ```js
 const post = require('micro-post')
@@ -29,6 +43,59 @@ module.exports = post(async (req, res) => {
   return `It's a POST request!`
 })
 ```
+
+### With options
+
+You can parameterize some different responses like other messages, JSON and even a function to manage the request by yourself.
+
+```js
+const post = require('micro-post')
+
+const options = {
+  errorCode: 404,
+  response: 'My custom response',
+  contentType: 'text/plain'
+}
+
+module.exports = post(options, async (req, res) => {
+  return `It's a POST request!`
+})
+```
+
+## Examples
+
+### All default options: <a href="./examples/default">default</a>
+
+Example that use the default options of the package.
+
+### Custom Message: <a href="./examples/custom-message">custom-message</a>
+
+The response is a custom message `Changing the default message is simple as breathe` with content-type `text/plain`.
+
+
+### Custom JSON: <a href="./examples/custom-json">custom-json</a>
+
+The response is a custom JSON  with content-type `application/json`.
+
+*The package change automatically the content-type to `application/json` in case your `response` property in the options parameter is an object.*
+
+```js
+{
+  error: {
+    message: 'Invalid method'
+  }
+}
+```
+
+### Custom HTML: <a href="./examples/custom-html">custom-html</a>
+
+The response is a custom HTML  with content-type `text/html`.
+
+
+### Custom Function: <a href="./examples/custom-function">custom-function</a>
+
+Before the response ends, the function that receives the `request` and the `response` from HTTP is called.
+
 
 ## License
 
