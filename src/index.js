@@ -29,11 +29,11 @@ module.exports = exports = function (params, fn) {
         return response(req, res, () => {
           res.end()
         })
-      } else {
-        res.setHeader('Content-Type', contentType)
-        res.setHeader('Content-Length', contentLength)
-        res.write(response)
       }
+
+      res.setHeader('Content-Type', contentType)
+      res.setHeader('Content-Length', contentLength)
+      res.write(response)
 
       res.end()
       return
