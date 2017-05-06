@@ -1,7 +1,6 @@
 # micro-post
 > Example that executes a function to handle the `request` and `response` before the response ends.
 
-[https://micro-post-example-custom-function.now.sh](https://micro-post-example-custom-function.now.sh)
 
 ## Running
 

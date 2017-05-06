@@ -66,21 +66,18 @@ module.exports = post(options, async (req, res) => {
 
 Example that use the default options of the package.
 
-URL: [https://micro-post-example-default.now.sh](https://micro-post-example-default.now.sh)
 
 
 ### Custom Message: <a href="./examples/custom-message">custom-message</a>
 
 The response is a custom message `Changing the default message is simple as breathe` with content-type `text/plain`.
 
-URL: [https://micro-post-example-custom-message.now.sh](https://micro-post-example-custom-message.now.sh)
 
 
 ### Custom JSON: <a href="./example/custom-json">custom-json</a>
 
 The response is a custom JSON  with content-type `application/json`.
 
-URL: [https://micro-post-example-custom-json.now.sh](https://micro-post-example-custom-json.now.sh)
 
 *The package change automatically the content-type to `application/json` in case your `response` property in the options parameter is an object.*
 
@@ -97,14 +94,12 @@ URL: [https://micro-post-example-custom-json.now.sh](https://micro-post-example-
 
 The response is a custom HTML  with content-type `text/html`.
 
-URL: [https://micro-post-example-custom-html.now.sh](https://micro-post-example-custom-html.now.sh)
 
 
 ### Custom Function: <a href="./example/custom-function">custom-function</a>
 
 Before the response ends, the function that receives the `request` and the `response` from HTTP is called.
 
-URL: [https://micro-post-example-custom-function.now.sh](https://micro-post-example-custom-function.now.sh)
 
 
 ## Developing/Contributing

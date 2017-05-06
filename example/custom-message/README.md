@@ -1,7 +1,6 @@
 # micro-post
 > Example that uses a custom text response.
 
-[https://micro-post-example-custom-message.now.sh](https://micro-post-example-custom-message.now.sh)
 
 ## Running
 

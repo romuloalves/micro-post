@@ -1,7 +1,6 @@
 # micro-post
 > Example that uses a custom JSON as response.
 
-[https://micro-post-example-custom-json.now.sh](https://micro-post-example-custom-json.now.sh)
 
 ## Running
 
