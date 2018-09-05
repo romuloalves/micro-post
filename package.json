@@ -7,7 +7,8 @@
   "scripts": {
     "test": "xo && ava-ts",
     "build": "tsc -p tsconfig.build.json",
-    "format": "xo --fix"
+    "format": "xo --fix",
+    "prepare": "yarn build"
   },
   "repository": {
     "type": "git",
