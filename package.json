@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Package to only accept POST request for microservices built with zeit/micro",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "ava-ts",
     "build": "tsc -p tsconfig.build.json",

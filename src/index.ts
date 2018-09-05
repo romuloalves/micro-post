@@ -1,7 +1,7 @@
 import { ServerResponse, IncomingMessage } from "http";
 import { RequestHandler } from "micro";
 
-type ResponseChainHandler = (
+export type ResponseChainHandler = (
   req: IncomingMessage,
   res: ServerResponse,
   next: Function
@@ -31,7 +31,9 @@ function post(
     params = paramsOrRequestHandler;
     handler = fn;
   } else {
-    throw new Error("You must either provide just the `fn` or both the `params` and `fn` arguments.");
+    throw new Error(
+      "You must either provide just the `fn` or both the `params` and `fn` arguments."
+    );
   }
 
   // Get custom code and content or defaults
@@ -62,7 +64,7 @@ function post(
       res.setHeader("Content-Type", contentType);
       res.setHeader("Content-Length", contentLength);
       res.write(response);
-      
+
       res.end();
       return;
     }
@@ -71,4 +73,8 @@ function post(
   };
 }
 
-export = post
+// typescript/es6 compatible default export
+export default post
+
+// backward compatible (nodejs require) exports
+module.exports = exports = post
