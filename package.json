@@ -34,14 +34,17 @@
     "space": true,
     "semicolon": false,
     "rules": {
-      "import/no-unresolved": [2, {
-        "ignore": ["micro-post"]
-      }]
+      "import/no-unresolved": [
+        2,
+        {
+          "ignore": [
+            "micro-post"
+          ]
+        }
+      ]
     }
   },
   "devDependencies": {
-    "@types/micro": "^7.3.1",
-    "@types/node": "^10.9.4",
     "@types/request-promise": "^4.1.42",
     "@types/test-listen": "^1.1.0",
     "ava": "^0.19.1",
@@ -52,5 +55,9 @@
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3",
     "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "@types/micro": "^7.3.1",
+    "@types/node": "^10.9.4"
   }
 }

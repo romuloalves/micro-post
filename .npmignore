@@ -1,0 +1,6 @@
+src/
+test/
+tsconfig.*
+.nvmrc
+yarn-error.log
+!dist/
