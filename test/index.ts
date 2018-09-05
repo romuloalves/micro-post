@@ -1,14 +1,15 @@
 // Packages
-const micro = require('micro')
-const test = require('ava')
-const listen = require('test-listen')
-const request = require('request-promise')
+import micro, { RequestHandler } from 'micro'
+import test  from 'ava'
+import listen from 'test-listen'
+import request from 'request-promise'
+import { ServerResponse } from 'http';
 
 // Lib
 const post = require('../src')
 
 // Function service
-const service = async function (req, res) {
+const service: RequestHandler = async function (_req, res) {
   res.write('POST succeed')
   res.end()
 }
@@ -75,7 +76,7 @@ test('get with json response', async t => {
 })
 
 test('get with function in the response', async t => {
-  function responseFn(req, res, next) {
+  function responseFn(_req: any, res: ServerResponse, next: Function) {
     res.write('writing...')
     next()
   }

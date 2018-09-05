@@ -2,9 +2,11 @@
   "name": "micro-post",
   "version": "1.0.0",
   "description": "Package to only accept POST request for microservices built with zeit/micro",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "xo && ava"
+    "test": "ava-ts",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "xo --fix"
   },
   "repository": {
     "type": "git",
@@ -32,10 +34,17 @@
     "semicolon": false
   },
   "devDependencies": {
+    "@types/micro": "^7.3.1",
+    "@types/node": "^10.9.4",
+    "@types/request-promise": "^4.1.42",
+    "@types/test-listen": "^1.1.0",
     "ava": "^0.19.1",
+    "ava-ts": "^0.25.1",
     "micro": "^6.1.0",
     "request-promise": "^4.2.0",
     "test-listen": "^1.0.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
     "xo": "^0.17.1"
   }
 }
