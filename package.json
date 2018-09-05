@@ -32,7 +32,12 @@
   "homepage": "https://github.com/romuloalves/micro-post#readme",
   "xo": {
     "space": true,
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "import/no-unresolved": [2, {
+        "ignore": ["micro-post"]
+      }]
+    }
   },
   "devDependencies": {
     "@types/micro": "^7.3.1",
