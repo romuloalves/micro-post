@@ -50,6 +50,7 @@
     "ava": "^0.19.1",
     "ava-ts": "^0.25.1",
     "micro": "^6.1.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.0",
     "test-listen": "^1.0.2",
     "ts-node": "^7.0.1",
