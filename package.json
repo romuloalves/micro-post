@@ -2,9 +2,13 @@
   "name": "micro-post",
   "version": "1.0.0",
   "description": "Package to only accept POST request for microservices built with zeit/micro",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && ava-ts",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "xo --fix",
+    "prepare": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -29,13 +33,33 @@
   "homepage": "https://github.com/romuloalves/micro-post#readme",
   "xo": {
     "space": true,
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "import/no-unresolved": [
+        2,
+        {
+          "ignore": [
+            "micro-post"
+          ]
+        }
+      ]
+    }
   },
   "devDependencies": {
+    "@types/request-promise": "^4.1.42",
+    "@types/test-listen": "^1.1.0",
     "ava": "^0.19.1",
+    "ava-ts": "^0.25.1",
     "micro": "^6.1.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.0",
     "test-listen": "^1.0.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
     "xo": "^0.17.1"
+  },
+  "dependencies": {
+    "@types/micro": "^7.3.1",
+    "@types/node": "^10.9.4"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "exclude": ["**/*.spec.ts", "dist", "test"],
+  "compilerOptions": {
+    "declarationDir": "dist" /* Redirect output structure to the directory. */,
+    "declaration": true /* Generated corresponding '.d.ts' file. */,
+    "declarationMap": true /* Generates corresponding '.map' file. */,
+  }
+}
