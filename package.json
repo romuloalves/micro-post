@@ -1,6 +1,6 @@
 {
   "name": "micro-post",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Package to only accept POST request for microservices built with zeit/micro",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
