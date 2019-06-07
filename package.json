@@ -46,20 +46,20 @@
     }
   },
   "devDependencies": {
+    "@types/micro": "^7.3.1",
+    "@types/node": "^12.0.4",
     "@types/request-promise": "^4.1.42",
     "@types/test-listen": "^1.1.0",
-    "ava": "^0.19.1",
+    "ava": "^1.4.1",
     "ava-ts": "^0.25.1",
-    "micro": "^6.1.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.0",
     "test-listen": "^1.0.2",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.2.0",
     "typescript": "^3.0.3",
-    "xo": "^0.17.1"
+    "xo": "^0.24.0"
   },
   "dependencies": {
-    "@types/micro": "^7.3.1",
-    "@types/node": "^10.9.4"
+    "micro": "^9.3.4"
   }
 }

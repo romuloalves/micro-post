@@ -1,5 +1,3 @@
-'use strict'
-
 const {send} = require('micro')
 const post = require('micro-post')
 
@@ -9,5 +7,5 @@ async function errorResponseFunction(req, res, next) {
 }
 
 module.exports = post({response: errorResponseFunction}, async (req, res) => {
-  return send(res, 200, `It's a POST request!`)
+  return send(res, 200, 'It\'s a POST request!')
 })
