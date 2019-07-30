@@ -160,7 +160,7 @@ test('get with json response', async t => {
   t.deepEqual(JSON.parse(response.error as string), {error: true})
 
   // @ts-ignore
-  t.deepEqual(response.response.headers['content-type'], 'application/json')
+  t.deepEqual(response.response.headers['content-type'], 'application/json; charset=utf-8')
 
   microInstance.close()
 })
@@ -169,6 +169,35 @@ test('get with function in the response', async t => {
   function responseFn(_req: any, res: ServerResponse, next: Function) {
     res.write('writing...')
     next()
+  }
+
+  const microInstance = micro(post({response: responseFn}, service))
+  const url = await listen(microInstance)
+  const response: IncomingMessage = await new Promise(async resolve => {
+    let data = null
+
+    try {
+      data = await requestPromise(url, {
+        resolveWithFullResponse: true
+      })
+    } catch (error) {
+      data = error
+    }
+
+    return resolve(data)
+  })
+
+  t.deepEqual(response.statusCode, 405)
+
+  // @ts-ignore
+  t.deepEqual(response.error, 'writing...')
+
+  microInstance.close()
+})
+
+test('get with micro RequestHandler in the response', async t => {
+  function responseFn(_req: any, _res: ServerResponse) {
+    return 'writing...'
   }
 
   const microInstance = micro(post({response: responseFn}, service))
