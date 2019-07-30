@@ -50,7 +50,7 @@
     "@types/node": "^12.6.8",
     "@types/request-promise": "^4.1.42",
     "@types/test-listen": "^1.1.0",
-    "ava": "^1.4.1",
+    "ava": "^2.2.0",
     "ava-ts": "^0.25.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.0",
